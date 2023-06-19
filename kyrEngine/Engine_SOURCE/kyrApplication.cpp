@@ -1,5 +1,7 @@
 #include "kyrApplication.h"
-
+#include "kyrInput.h"
+#include "kyrTime.h"
+#include "kyrRenderer.h"
 
 namespace kyr
 {
@@ -25,10 +27,16 @@ namespace kyr
 
 	void Application::Initialize()
 	{
+		Time::Initiailize();
+		Input::Initialize();
+
+		renderer::Initialize();
 	}
 
 	void Application::Update()
 	{
+		Time::Update();
+		Input::Update();
 	}
 
 	void Application::LateUpdate()
@@ -37,6 +45,8 @@ namespace kyr
 
 	void Application::Render()
 	{
+		Time::Render();
+
 		graphicDevice->Draw();
 	}
 
@@ -49,6 +59,7 @@ namespace kyr
 			mHeight = height;
 
 			graphicDevice = std::make_unique<kyr::graphics::GraphicDevice_Dx11>();
+			kyr::graphics::GetDevice() = graphicDevice.get();
 		}
 
 		RECT rt = { 0, 0, (LONG)width , (LONG)height };

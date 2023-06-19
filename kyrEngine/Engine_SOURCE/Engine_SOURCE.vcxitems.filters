@@ -66,6 +66,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -92,5 +93,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
   </ItemGroup>
 </Project>
