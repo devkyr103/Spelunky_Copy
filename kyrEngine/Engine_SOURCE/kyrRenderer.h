@@ -14,14 +14,9 @@ namespace renderer
 	};
 
 	extern Vertex vertexes[];
-	extern ID3D11InputLayout* triangleLayout;
-
 	extern kyr::Mesh* mesh;
 	extern ID3D11Buffer* triangleConstantBuffer;
-
 	extern kyr::Shader* shader;
-	extern ID3D11PixelShader* trianglePSShader;
-
 
 	void Initialize();
 	void Release();

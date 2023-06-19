@@ -4,22 +4,35 @@ namespace renderer
 {
 	Vertex vertexes[4] = {};
 
-	// Input Layout (정점 정보)
-	ID3D11InputLayout* triangleLayout = nullptr;
-
-	// Vertex Buffer
 	kyr::Mesh* mesh = nullptr;
 
 	ID3D11Buffer* triangleConstantBuffer = nullptr;
 
 	kyr::Shader* shader = nullptr;
 	
-	// Vertex Shader
-	ID3D11PixelShader* trianglePSShader = nullptr;
-
 	void SetupState()
 	{
+		// Input layout 정점 구조 정보를 넘겨줘야한다.
+		D3D11_INPUT_ELEMENT_DESC arrLayout[2] = {};
 
+		arrLayout[0].AlignedByteOffset = 0;
+		arrLayout[0].Format = DXGI_FORMAT_R32G32B32_FLOAT;
+		arrLayout[0].InputSlot = 0;
+		arrLayout[0].InputSlotClass = D3D11_INPUT_PER_VERTEX_DATA;
+		arrLayout[0].SemanticName = "POSITION";
+		arrLayout[0].SemanticIndex = 0;
+
+		arrLayout[1].AlignedByteOffset = 12;
+		arrLayout[1].Format = DXGI_FORMAT_R32G32B32A32_FLOAT;
+		arrLayout[1].InputSlot = 0;
+		arrLayout[1].InputSlotClass = D3D11_INPUT_PER_VERTEX_DATA;
+		arrLayout[1].SemanticName = "COLOR";
+		arrLayout[1].SemanticIndex = 0;
+
+
+		kyr::graphics::GetDevice()->CreateInputLayout(arrLayout, 2
+			, shader->GetVSCode()
+			, shader->GetInputLayoutAddressOf());
 	}
 
 	void LoadBuffer()
@@ -75,20 +88,14 @@ namespace renderer
 		vertexes[3].color = Vector4(1.0f, 1.0f, 1.0f, 1.0f);
 
 
-		SetupState();
 		LoadBuffer();
 		LoadShader();
+		SetupState();
 	}
 
 	void Release()
 	{
-		if (triangleLayout != nullptr)
-			triangleLayout->Release();
-
 		if (triangleConstantBuffer != nullptr)
 			triangleConstantBuffer->Release();
-
-		if (trianglePSShader != nullptr)
-			trianglePSShader->Release();
 	}
 }

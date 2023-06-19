@@ -3,15 +3,20 @@
 namespace kyr
 {
 	Shader::Shader()
+		: mInputLayout(nullptr)
+		, mTopology(D3D11_PRIMITIVE_TOPOLOGY::D3D11_PRIMITIVE_TOPOLOGY_TRIANGLELIST)
 	{
 	}
+
 	Shader::~Shader()
 	{
 	}
+
 	HRESULT Shader::Load(const std::wstring& path)
 	{
 		return E_NOTIMPL;
 	}
+
 	bool Shader::Create(const eShaderStage stage
 		, const std::wstring& fileName
 		, const std::string& funcName)
@@ -40,6 +45,7 @@ namespace kyr
 
 		return true;;
 	}
+
 	void Shader::Binds()
 	{
 		GetDevice()->BindVertexShader(mVS.Get());
