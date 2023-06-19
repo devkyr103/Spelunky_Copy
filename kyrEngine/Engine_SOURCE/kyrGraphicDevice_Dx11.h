@@ -1,5 +1,6 @@
 #pragma once
 #include "kyrEngine.h"
+#include "kyrGraphics.h"
 
 #include <d3d11.h>
 #include <d3dcompiler.h>
@@ -24,6 +25,10 @@ namespace kyr::graphics
 		bool CreateTexture(const D3D11_TEXTURE2D_DESC* desc, void* data);
 
 		void BindViewPort(D3D11_VIEWPORT* viewPort);
+
+		void SetConstantBuffer(ID3D11Buffer* buffer, void* data, UINT size);
+		void BindConstantBuffer(eShaderStage stage, eCBType type, ID3D11Buffer* buffer);
+		void BindsConstantBuffer(eShaderStage stage, eCBType type, ID3D11Buffer* buffer);
 
 		void Draw();
 
