@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Label="Globals">
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <ItemsProjectGuid>{25b47558-2a3d-4810-ab74-374536526503}</ItemsProjectGuid>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);$(MSBuildThisFileDirectory)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ProjectCapability Include="SourceItemsFromImports" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrEngine.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrEntity.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrGraphics.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrTime.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrTime.cpp" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "kyrEngine", "kyrEngine\kyrEngine.vcxproj", "{3654D164-2B6C-4531-A413-E309EE039C99}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C542F03-3771-4141-A7D2-60D42FC584C1} = {3C542F03-3771-4141-A7D2-60D42FC584C1}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_Window", "Editor_Window\Editor_Window.vcxproj", "{3C542F03-3771-4141-A7D2-60D42FC584C1}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Editor_SOURCE", "Editor_SOURCE\Editor_SOURCE.vcxitems", "{A43BAACC-F7A5-444F-9477-A8D913316BE6}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Shader_SOURCE", "Shader_SOURCE\Shader_SOURCE.vcxitems", "{A32F5A04-32B0-48FA-894B-E5CB5649C9B7}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Engine_SOURCE", "Engine_SOURCE\Engine_SOURCE.vcxitems", "{25B47558-2A3D-4810-AB74-374536526503}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Engine_SOURCE\Engine_SOURCE.vcxitems*{25b47558-2a3d-4810-ab74-374536526503}*SharedItemsImports = 9
+		Engine_SOURCE\Engine_SOURCE.vcxitems*{3654d164-2b6c-4531-a413-e309ee039c99}*SharedItemsImports = 4
+		Editor_SOURCE\Editor_SOURCE.vcxitems*{3c542f03-3771-4141-a7d2-60d42fc584c1}*SharedItemsImports = 4
+		Engine_SOURCE\Engine_SOURCE.vcxitems*{3c542f03-3771-4141-a7d2-60d42fc584c1}*SharedItemsImports = 4
+		Shader_SOURCE\Shader_SOURCE.vcxitems*{a32f5a04-32b0-48fa-894b-e5cb5649c9b7}*SharedItemsImports = 9
+		Editor_SOURCE\Editor_SOURCE.vcxitems*{a43baacc-f7a5-444f-9477-a8d913316be6}*SharedItemsImports = 9
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Debug|x64.ActiveCfg = Debug|x64
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Debug|x64.Build.0 = Debug|x64
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Debug|x86.ActiveCfg = Debug|Win32
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Debug|x86.Build.0 = Debug|Win32
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Release|x64.ActiveCfg = Release|x64
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Release|x64.Build.0 = Release|x64
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Release|x86.ActiveCfg = Release|Win32
+		{3654D164-2B6C-4531-A413-E309EE039C99}.Release|x86.Build.0 = Release|Win32
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Debug|x64.ActiveCfg = Debug|x64
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Debug|x64.Build.0 = Debug|x64
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Debug|x86.ActiveCfg = Debug|Win32
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Debug|x86.Build.0 = Debug|Win32
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Release|x64.ActiveCfg = Release|x64
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Release|x64.Build.0 = Release|x64
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Release|x86.ActiveCfg = Release|Win32
+		{3C542F03-3771-4141-A7D2-60D42FC584C1}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {083C0448-9325-436F-BAB4-BA9089E1D855}
+	EndGlobalSection
+EndGlobal
