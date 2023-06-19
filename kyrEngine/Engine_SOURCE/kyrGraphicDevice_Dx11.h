@@ -2,12 +2,6 @@
 #include "kyrEngine.h"
 #include "kyrGraphics.h"
 
-#include <d3d11.h>
-#include <d3dcompiler.h>
-
-#pragma comment(lib, "d3d11.lib")
-#pragma comment(lib, "d3dcompiler.lib")
-
 namespace kyr::graphics
 {
 	class GraphicDevice_Dx11

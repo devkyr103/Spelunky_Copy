@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEnums.h" />
@@ -32,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrApplication.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrInput.cpp" />

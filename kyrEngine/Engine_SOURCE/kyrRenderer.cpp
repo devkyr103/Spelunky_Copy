@@ -6,7 +6,7 @@ namespace renderer
 
 	kyr::Mesh* mesh = nullptr;
 
-	ID3D11Buffer* triangleConstantBuffer = nullptr;
+	kyr::graphics::ConstantBuffer* constantBuffer = nullptr;
 
 	kyr::Shader* shader = nullptr;
 	
@@ -53,17 +53,12 @@ namespace renderer
 		mesh->CreateIndexBuffer(indexes.data(), indexes.size());
 
 		// Constant Buffer
-		D3D11_BUFFER_DESC triangleCSDesc = {};
-		triangleCSDesc.ByteWidth = sizeof(Vector4);
-		triangleCSDesc.BindFlags = D3D11_BIND_FLAG::D3D11_BIND_CONSTANT_BUFFER;
-		triangleCSDesc.Usage = D3D11_USAGE::D3D11_USAGE_DYNAMIC;
-		triangleCSDesc.CPUAccessFlags = D3D11_CPU_ACCESS_WRITE;
+		constantBuffer = new kyr::graphics::ConstantBuffer(eCBType::Transform);
+		constantBuffer->Create(sizeof(Vector4));
 
-		kyr::graphics::GetDevice()->CreateBuffer(&triangleConstantBuffer, &triangleCSDesc, nullptr);
-
-		Vector4 pos(0.0f, 0.0f, 0.0f, 1.0f);
-		kyr::graphics::GetDevice()->SetConstantBuffer(triangleConstantBuffer, &pos, sizeof(Vector4));
-		kyr::graphics::GetDevice()->BindConstantBuffer(eShaderStage::VS, eCBType::Transform, triangleConstantBuffer);
+		Vector4 pos(0.2f, 0.0f, 0.0f, 1.0f);
+		constantBuffer->SetData(&pos);
+		constantBuffer->Bind(eShaderStage::VS);
 	}
 
 	void LoadShader()
@@ -95,7 +90,8 @@ namespace renderer
 
 	void Release()
 	{
-		if (triangleConstantBuffer != nullptr)
-			triangleConstantBuffer->Release();
+		delete mesh;
+		delete shader;
+		delete constantBuffer;
 	}
 }

@@ -66,13 +66,16 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h">
       <Filter>Graphics</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h">
       <Filter>Graphics</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -99,12 +102,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.cpp" />
   </ItemGroup>
 </Project>
