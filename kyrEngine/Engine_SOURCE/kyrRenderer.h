@@ -3,7 +3,7 @@
 #include "kyrGraphicDevice_Dx11.h"
 
 using namespace kyr::math;
-namespace kyr::renderer
+namespace renderer
 {
 	struct Vertex
 	{
@@ -24,4 +24,5 @@ namespace kyr::renderer
 
 
 	void Initialize();
+	void Release();
 }

@@ -162,17 +162,17 @@ namespace kyr::graphics
 		vsPath += L"TriangleVS.hlsl";
 
 		D3DCompileFromFile(vsPath.c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE
-			, "main", "vs_5_0", 0, 0, &kyr::renderer::triangleVSBlob, &kyr::renderer::errorBlob);
+			, "main", "vs_5_0", 0, 0, &renderer::triangleVSBlob, &renderer::errorBlob);
 
-		if (kyr::renderer::errorBlob)
+		if (renderer::errorBlob)
 		{
-			OutputDebugStringA((char*)kyr::renderer::errorBlob->GetBufferPointer());
-			kyr::renderer::errorBlob->Release();
+			OutputDebugStringA((char*)renderer::errorBlob->GetBufferPointer());
+			renderer::errorBlob->Release();
 		}
 
-		mDevice->CreateVertexShader(kyr::renderer::triangleVSBlob->GetBufferPointer()
-			, kyr::renderer::triangleVSBlob->GetBufferSize()
-			, nullptr, &kyr::renderer::triangleVSShader);
+		mDevice->CreateVertexShader(renderer::triangleVSBlob->GetBufferPointer()
+			, renderer::triangleVSBlob->GetBufferSize()
+			, nullptr, &renderer::triangleVSShader);
 
 
 		//ps
@@ -180,17 +180,17 @@ namespace kyr::graphics
 		psPath += L"TrianglePS.hlsl";
 
 		D3DCompileFromFile(psPath.c_str(), nullptr, D3D_COMPILE_STANDARD_FILE_INCLUDE
-			, "main", "ps_5_0", 0, 0, &kyr::renderer::trianglePSBlob, &kyr::renderer::errorBlob);
+			, "main", "ps_5_0", 0, 0, &renderer::trianglePSBlob, &renderer::errorBlob);
 
-		if (kyr::renderer::errorBlob)
+		if (renderer::errorBlob)
 		{
-			OutputDebugStringA((char*)kyr::renderer::errorBlob->GetBufferPointer());
-			kyr::renderer::errorBlob->Release();
+			OutputDebugStringA((char*)renderer::errorBlob->GetBufferPointer());
+			renderer::errorBlob->Release();
 		}
 
-		mDevice->CreatePixelShader(kyr::renderer::trianglePSBlob->GetBufferPointer()
-			, kyr::renderer::trianglePSBlob->GetBufferSize()
-			, nullptr, &kyr::renderer::trianglePSShader);
+		mDevice->CreatePixelShader(renderer::trianglePSBlob->GetBufferPointer()
+			, renderer::trianglePSBlob->GetBufferSize()
+			, nullptr, &renderer::trianglePSShader);
 
 
 		// Input layout 정점 구조 정보를 넘겨줘야한다.
