@@ -23,9 +23,11 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrInput.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMath.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTime.h" />
   </ItemGroup>
   <ItemGroup>
@@ -34,9 +36,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrInput.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMath.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTime.cpp" />
   </ItemGroup>
 </Project>

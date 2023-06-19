@@ -67,6 +67,12 @@
       <Filter>Resource</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -94,5 +100,11 @@
       <Filter>Resource</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
