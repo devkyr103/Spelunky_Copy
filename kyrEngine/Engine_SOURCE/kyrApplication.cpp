@@ -10,6 +10,7 @@ namespace kyr
 		, mHwnd(NULL)
 		, mWidth(-1)
 		, mHeight(-1)
+		, mScene(nullptr)
 	{
 
 	}
@@ -31,12 +32,17 @@ namespace kyr
 		Input::Initialize();
 
 		renderer::Initialize();
+
+		mScene = new Scene();
+		mScene->Initialize();
 	}
 
 	void Application::Update()
 	{
 		Time::Update();
 		Input::Update();
+
+		mScene->Update();
 	}
 
 	void Application::LateUpdate()
@@ -48,6 +54,8 @@ namespace kyr
 		Time::Render();
 
 		graphicDevice->Draw();
+		mScene->Render();
+		graphicDevice->Present();
 	}
 
 	void Application::SetWindow(HWND hwnd, UINT width, UINT height)

@@ -1,6 +1,7 @@
 #pragma once
 #include "kyrEngine.h"
 #include "kyrGraphicDevice_Dx11.h"
+#include "kyrScene.h"
 
 namespace kyr
 {
@@ -32,5 +33,7 @@ namespace kyr
 		HWND mHwnd;
 		UINT mWidth;
 		UINT mHeight;
+
+		Scene* mScene;
 	};
 }

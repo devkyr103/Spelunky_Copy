@@ -16,32 +16,44 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEngine.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEntity.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEnums.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrGameObject.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrGraphics.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrInput.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResources.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTime.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrGameObject.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrGraphicDevice_Dx11.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrInput.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResources.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTime.cpp" />
   </ItemGroup>

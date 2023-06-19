@@ -2,12 +2,12 @@
 
 namespace renderer
 {
+	using namespace kyr;
+	using namespace kyr::graphics;
+
 	Vertex vertexes[4] = {};
-
 	kyr::Mesh* mesh = nullptr;
-
 	kyr::graphics::ConstantBuffer* constantBuffer = nullptr;
-
 	kyr::Shader* shader = nullptr;
 	
 	void SetupState()
