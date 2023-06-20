@@ -28,6 +28,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrLayer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMath.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrPlayScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResources.h" />
@@ -48,6 +49,7 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrLayer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMath.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrPlayScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResources.cpp" />

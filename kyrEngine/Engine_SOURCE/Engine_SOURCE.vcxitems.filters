@@ -43,6 +43,12 @@
     <Filter Include="Scene\Layer">
       <UniqueIdentifier>{56c933e7-87ef-401d-8fd6-52db350a1d08}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Scene\Manager">
+      <UniqueIdentifier>{0d984b54-e1f9-445c-aa6b-1093f7a4a7d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\Base">
+      <UniqueIdentifier>{5ffd30bf-7945-4f02-920c-f821481b62b5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEntity.h">
@@ -102,13 +108,16 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.h">
       <Filter>Graphics</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrSceneManager.h">
-      <Filter>Scene</Filter>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrLayer.h">
+      <Filter>Scene\Layer</Filter>
     </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrScene.h">
-      <Filter>Scene</Filter>
+      <Filter>Scene\Base</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrLayer.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrSceneManager.h">
+      <Filter>Scene\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrPlayScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -156,12 +165,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.cpp">
       <Filter>Graphics</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrSceneManager.cpp">
-      <Filter>Scene</Filter>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrLayer.cpp">
+      <Filter>Scene\Layer</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrScene.cpp">
-      <Filter>Scene</Filter>
+      <Filter>Scene\Base</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrLayer.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrSceneManager.cpp">
+      <Filter>Scene\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrPlayScene.cpp" />
   </ItemGroup>
 </Project>

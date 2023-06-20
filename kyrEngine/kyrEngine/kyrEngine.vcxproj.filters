@@ -6,4 +6,15 @@
   <ItemGroup>
     <ClCompile Include="kyrEngine.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Load">
+      <UniqueIdentifier>{a96fbd45-61a3-4519-8c39-7d4016f0f72f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{a593159a-17e5-47b9-94b6-17197b2121c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{fde44392-fa89-4de3-a7f2-6da3275f9546}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
 </Project>

@@ -1,6 +1,6 @@
 #pragma once
 #include "kyrEntity.h"
-#include "kyrGameObject.h"
+#include "kyrLayer.h"
 
 namespace kyr
 {
@@ -16,7 +16,7 @@ namespace kyr
 		virtual void Render();
 
 	private:
-		std::vector<GameObject*> mGameObjects;
+		std::vector<Layer*> mLayers;
 	};
 
 }
