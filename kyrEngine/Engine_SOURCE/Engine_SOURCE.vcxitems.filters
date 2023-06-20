@@ -126,6 +126,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTransform.h">
       <Filter>GameObject\Component</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrTexture.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -190,6 +193,9 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTransform.cpp">
       <Filter>GameObject\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrTexture.cpp">
+      <Filter>Resource</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
