@@ -9,9 +9,10 @@ namespace renderer
 
 	Vertex vertexes[4] = {};
 	kyr::Mesh* mesh = nullptr;
-	kyr::graphics::ConstantBuffer* constantBuffer = nullptr;
 	kyr::Shader* shader = nullptr;
-	
+	kyr::graphics::ConstantBuffer* constantBuffer = nullptr;
+	Microsoft::WRL::ComPtr<ID3D11SamplerState> samplerState[(UINT)eSamplerType::End] = {};
+
 	void SetupState()
 	{
 		// Input layout 정점 구조 정보를 넘겨줘야한다.
@@ -41,6 +42,19 @@ namespace renderer
 		kyr::graphics::GetDevice()->CreateInputLayout(arrLayout, 3
 			, shader->GetVSCode()
 			, shader->GetInputLayoutAddressOf());
+
+		//Sampler State
+		D3D11_SAMPLER_DESC desc = {};
+		desc.AddressU = D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP;
+		desc.AddressV = D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP;
+		desc.AddressW = D3D11_TEXTURE_ADDRESS_MODE::D3D11_TEXTURE_ADDRESS_WRAP;
+		desc.Filter = D3D11_FILTER_MIN_MAG_MIP_POINT;
+		GetDevice()->CreateSampler(&desc, samplerState[(UINT)eSamplerType::Point].GetAddressOf());
+		GetDevice()->BindSampler(eShaderStage::PS, 0, samplerState[(UINT)eSamplerType::Point].GetAddressOf());
+
+		desc.Filter = D3D11_FILTER_ANISOTROPIC;
+		GetDevice()->CreateSampler(&desc, samplerState[(UINT)eSamplerType::Anisotropic].GetAddressOf());
+		GetDevice()->BindSampler(eShaderStage::PS, 1, samplerState[(UINT)eSamplerType::Anisotropic].GetAddressOf());
 	}
 
 	void LoadBuffer()
@@ -100,6 +114,8 @@ namespace renderer
 
 		Texture* texture
 			= Resources::Load<Texture>(L"Smile", L"..\\Resources\\Texture\\Smile.png");
+		texture
+			= Resources::Load<Texture>(L"Link", L"..\\Resources\\Texture\\Link.png");
 
 		texture->BindShader(eShaderStage::PS, 0);
 	}
