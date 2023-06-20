@@ -1,13 +1,15 @@
 #pragma once
-#include "kyrScene.h"
+#include "kyrComponent.h"
+#include "kyrMesh.h"
+#include "kyrShader.h"
 
 namespace kyr
 {
-	class PlayScene : public Scene
+	class MeshRenderer : public Component
 	{
 	public:
-		PlayScene();
-		virtual ~PlayScene();
+		MeshRenderer();
+		~MeshRenderer();
 
 		virtual void Initialize() override;
 		virtual void Update() override;
@@ -15,7 +17,8 @@ namespace kyr
 		virtual void Render() override;
 
 	private:
-
+		Mesh* mMesh;
+		Shader* mShader;
 	};
 
 }

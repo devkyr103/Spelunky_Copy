@@ -2,6 +2,7 @@
 #include "kyrInput.h"
 #include "kyrTime.h"
 #include "kyrRenderer.h"
+#include "kyrSceneManager.h"
 
 namespace kyr
 {
@@ -10,7 +11,6 @@ namespace kyr
 		, mHwnd(NULL)
 		, mWidth(-1)
 		, mHeight(-1)
-		, mScene(nullptr)
 	{
 
 	}
@@ -33,8 +33,7 @@ namespace kyr
 
 		renderer::Initialize();
 
-		mScene = new Scene();
-		mScene->Initialize();
+		SceneManager::Initialize();
 	}
 
 	void Application::Update()
@@ -42,19 +41,22 @@ namespace kyr
 		Time::Update();
 		Input::Update();
 
-		mScene->Update();
+		SceneManager::Update();
 	}
 
 	void Application::LateUpdate()
 	{
+		SceneManager::LateUpdate();
 	}
 
 	void Application::Render()
 	{
 		Time::Render();
 
-		graphicDevice->Draw();
-		mScene->Render();
+		graphicDevice->ClearTarget();
+		graphicDevice->UpdateViewPort();
+		SceneManager::Render();
+		
 		graphicDevice->Present();
 	}
 

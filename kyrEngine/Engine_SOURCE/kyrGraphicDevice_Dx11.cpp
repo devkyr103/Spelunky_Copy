@@ -194,6 +194,11 @@ namespace kyr::graphics
 		return true;
 	}
 
+	void GraphicDevice_Dx11::BindViewPort(D3D11_VIEWPORT* viewPort)
+	{
+		mContext->RSSetViewports(1, viewPort);
+	}
+
 	void GraphicDevice_Dx11::DrawIndexed(UINT IndexCount, UINT StartIndexLocation, INT BaseVertexLocation)
 	{
 		mContext->DrawIndexed(IndexCount, StartIndexLocation, BaseVertexLocation);
@@ -282,18 +287,17 @@ namespace kyr::graphics
 		mContext->CSSetConstantBuffers((UINT)type, 1, &buffer);
 	}
 
-	void GraphicDevice_Dx11::BindViewPort(D3D11_VIEWPORT* viewPort)
-	{
-		mContext->RSSetViewports(1, viewPort);
-	}
-
-	void GraphicDevice_Dx11::Draw()
+	void GraphicDevice_Dx11::ClearTarget()
 	{
 		// render target clear
 		FLOAT bgColor[4] = { 0.2f, 0.2f, 0.2f, 1.0f };
 		mContext->ClearRenderTargetView(mRenderTargetView.Get(), bgColor);
 		mContext->ClearDepthStencilView(mDepthStencilView.Get(), D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0.0f);
+		mContext->OMSetRenderTargets(1, mRenderTargetView.GetAddressOf(), mDepthStencilView.Get());
+	}
 
+	void GraphicDevice_Dx11::UpdateViewPort()
+	{
 		// viewport update
 		HWND hWnd = application.GetHwnd();
 		RECT winRect = {};
@@ -307,11 +311,11 @@ namespace kyr::graphics
 		};
 
 		BindViewPort(&mViewPort);
-		mContext->OMSetRenderTargets(1, mRenderTargetView.GetAddressOf(), mDepthStencilView.Get());
+	}
 
-		renderer::mesh->BindBuffer();
-		renderer::shader->Binds();
-		mContext->DrawIndexed(renderer::mesh->GetIndexCount(), 0, 0);
+	void GraphicDevice_Dx11::Draw()
+	{
+
 	}
 
 	void GraphicDevice_Dx11::Present()

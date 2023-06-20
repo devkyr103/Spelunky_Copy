@@ -4,6 +4,7 @@ namespace kyr
 {
 	Scene::Scene()
 	{
+		mLayers.resize((int)kyr::enums::eLayerType::End);
 	}
 	Scene::~Scene()
 	{
@@ -17,24 +18,29 @@ namespace kyr
 
 	void Scene::Update()
 	{
-		for (Layer* layer : mLayers)
+		for (Layer& layer : mLayers)
 		{
-			layer->Update();
+			layer.Update();
 		}
 	}
 
 	void Scene::LateUpdate()
 	{
-		for (Layer* layer : mLayers)
+		for (Layer& layer : mLayers)
 		{
-			layer->LateUpdate();
+			layer.LateUpdate();
 		}
 	}
 	void Scene::Render()
 	{
-		for (Layer* layer : mLayers)
+		for (Layer& layer : mLayers)
 		{
-			layer->Render();
+			layer.Render();
 		}
+	}
+
+	void Scene::AddGameObject(eLayerType type, GameObject* gameObj)
+	{
+		mLayers[(int)type].AddGameObject(gameObj);
 	}
 }

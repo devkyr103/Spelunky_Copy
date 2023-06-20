@@ -7,6 +7,8 @@ namespace kyr
 	void SceneManager::Initialize()
 	{
 		mActiveScene = new PlayScene();
+		mActiveScene->Initialize();
+
 	}
 	void SceneManager::Update()
 	{
