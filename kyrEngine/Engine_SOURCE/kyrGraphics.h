@@ -21,6 +21,7 @@ namespace kyr
 	enum class eCBType
 	{
 		Transform,
+		Material,
 		End,
 	};
 

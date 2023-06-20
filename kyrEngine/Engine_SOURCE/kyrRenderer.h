@@ -5,9 +5,11 @@
 #include "kyrShader.h"
 #include "kyrConstantBuffer.h"
 
-using namespace kyr::math;
 namespace renderer
 {
+	using namespace kyr;
+	using namespace kyr::math;
+	using namespace kyr::graphics;
 	struct Vertex
 	{
 		Vector3 pos;
@@ -16,9 +18,8 @@ namespace renderer
 	};
 
 	extern Vertex vertexes[];
-	extern kyr::Mesh* mesh;
-	extern kyr::Shader* shader;
-	extern kyr::graphics::ConstantBuffer* constantBuffer;
+	extern kyr::graphics::ConstantBuffer* constantBuffer[(UINT)eCBType::End];
+
 
 	void Initialize();
 	void Release();

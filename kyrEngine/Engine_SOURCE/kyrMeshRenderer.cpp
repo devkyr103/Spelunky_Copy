@@ -8,7 +8,7 @@ namespace kyr
 	MeshRenderer::MeshRenderer()
 		: Component(eComponentType::MeshRenderer)
 		, mMesh(nullptr)
-		, mShader(nullptr)
+		, mMaterial(nullptr)
 	{
 	}
 	MeshRenderer::~MeshRenderer()
@@ -31,8 +31,8 @@ namespace kyr
 		//mMesh->BindBuffer();
 		//mShader->Binds();
 
-		renderer::mesh->BindBuffer();
-		renderer::shader->Binds();
-		GetDevice()->DrawIndexed(renderer::mesh->GetIndexCount(), 0, 0);
+		mMesh->BindBuffer();
+		mMaterial->Binds();
+		mMesh->Render();
 	}
 }

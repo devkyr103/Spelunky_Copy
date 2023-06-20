@@ -1,7 +1,7 @@
 #pragma once
 #include "kyrComponent.h"
 #include "kyrMesh.h"
-#include "kyrShader.h"
+#include "kyrMaterial.h"
 
 namespace kyr
 {
@@ -16,9 +16,13 @@ namespace kyr
 		virtual void LateUpdate() override;
 		virtual void Render() override;
 
+		void SetMesh(Mesh* mesh) { mMesh = mesh; }
+		void SetMaterial(Material* material) { mMaterial = material; }
+
 	private:
 		Mesh* mMesh;
-		Shader* mShader;
+		Material* mMaterial;
+
 	};
 
 }

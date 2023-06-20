@@ -1,6 +1,8 @@
 #include "kyrPlayScene.h"
 #include "kyrTransform.h"
 #include "kyrMeshRenderer.h"
+#include "kyrResources.h"
+#include "kyrMesh.h"
 
 namespace kyr
 {
@@ -16,7 +18,9 @@ namespace kyr
 	{
 		GameObject* player = new GameObject();
 		AddGameObject(eLayerType::Player, player);
-		player->AddComponent<MeshRenderer>();
+		MeshRenderer* mr = player->AddComponent<MeshRenderer>();
+		mr->SetMesh(Resources::Find<Mesh>(L"RectMesh"));
+		mr->SetMaterial(Resources::Find<Material>(L"SpriteMaterial"));
 	}
 
 	void PlayScene::Update()
