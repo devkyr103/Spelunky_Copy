@@ -16,6 +16,7 @@
   <ItemGroup>
     <ClInclude Include="$(MSBuildThisFileDirectory)CommonInclude.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrApplication.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCameraScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrComponent.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrEngine.h" />
@@ -43,6 +44,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTransform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCameraScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrComponent.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrApplication.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrConstantBuffer.cpp" />

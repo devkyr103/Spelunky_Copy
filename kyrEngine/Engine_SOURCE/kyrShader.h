@@ -5,8 +5,7 @@
 namespace kyr
 {
 	using namespace graphics;
-	class Shader :
-		public Resource
+	class Shader : public Resource
 	{
 	public:
 		Shader();

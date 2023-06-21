@@ -87,12 +87,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResource.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h">
-      <Filter>Graphics</Filter>
-    </ClInclude>
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrRenderer.h">
       <Filter>Graphics</Filter>
     </ClInclude>
@@ -129,7 +123,16 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTexture.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMaterial.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCameraScript.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMesh.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrMaterial.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -155,12 +158,6 @@
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResource.cpp">
       <Filter>Resource</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp">
-      <Filter>Graphics</Filter>
-    </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp">
-      <Filter>Graphics</Filter>
     </ClCompile>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrRenderer.cpp">
       <Filter>Graphics</Filter>
@@ -198,6 +195,15 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTexture.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMaterial.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCameraScript.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrMaterial.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -6,7 +6,6 @@ namespace kyr
 {
 	using namespace graphics;
 
-
 	class Mesh :
 		public Resource
 	{

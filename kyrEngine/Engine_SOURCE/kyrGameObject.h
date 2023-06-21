@@ -1,6 +1,7 @@
 #pragma once
 #include "kyrEntity.h"
 #include "kyrComponent.h"
+#include "kyrScript.h"
 
 namespace kyr
 {
@@ -34,6 +35,13 @@ namespace kyr
 					return component;
 			}
 
+			for (Script* script : mScripts)
+			{
+				component = dynamic_cast<T*>(script);
+				if (component != nullptr)
+					return component;
+			}
+
 			return nullptr;
 		}
 
@@ -45,10 +53,17 @@ namespace kyr
 			Component* buff
 				= dynamic_cast<Component*>(comp);
 
+			Script* script
+				= dynamic_cast<Script*>(buff);
+
 			if (buff == nullptr)
 				return nullptr;
 
-			mComponents.push_back(buff);
+			if (script == nullptr)
+				mComponents.push_back(buff);
+			else
+				mScripts.push_back(script);
+
 			comp->SetOwner(this);
 
 			return comp;
@@ -57,6 +72,7 @@ namespace kyr
 	private:
 		eState mState;
 		std::vector<Component*> mComponents;
+		std::vector<Script*> mScripts;
 	};
 
 }

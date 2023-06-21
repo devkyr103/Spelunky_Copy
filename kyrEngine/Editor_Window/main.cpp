@@ -72,7 +72,6 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 	}
 
     renderer::Release();
-    kyr::Resources::Release();
     kyr::SceneManager::Release();
 
 	return (int)msg.wParam;

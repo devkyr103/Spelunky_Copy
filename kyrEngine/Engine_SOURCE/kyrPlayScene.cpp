@@ -3,6 +3,7 @@
 #include "kyrMeshRenderer.h"
 #include "kyrResources.h"
 #include "kyrMesh.h"
+#include "kyrCameraScript.h"
 
 namespace kyr
 {
@@ -21,6 +22,8 @@ namespace kyr
 		MeshRenderer* mr = player->AddComponent<MeshRenderer>();
 		mr->SetMesh(Resources::Find<Mesh>(L"RectMesh"));
 		mr->SetMaterial(Resources::Find<Material>(L"SpriteMaterial"));
+
+		player->AddComponent<CameraScript>();
 	}
 
 	void PlayScene::Update()
