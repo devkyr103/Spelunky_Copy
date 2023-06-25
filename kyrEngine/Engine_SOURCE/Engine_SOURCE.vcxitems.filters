@@ -133,6 +133,7 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMaterial.h">
       <Filter>Resource</Filter>
     </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCamera.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -205,5 +206,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMaterial.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCamera.cpp" />
   </ItemGroup>
 </Project>

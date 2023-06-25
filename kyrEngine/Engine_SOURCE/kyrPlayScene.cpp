@@ -24,6 +24,10 @@ namespace kyr
 		mr->SetMaterial(Resources::Find<Material>(L"SpriteMaterial"));
 
 		player->AddComponent<CameraScript>();
+
+		Transform* tr = player->GetComponent<Transform>();
+
+		tr->SetPosition(Vector3(0.5f, 0.5f, 0.f));
 	}
 
 	void PlayScene::Update()
