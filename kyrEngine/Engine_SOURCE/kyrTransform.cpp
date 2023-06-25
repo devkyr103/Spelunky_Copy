@@ -1,6 +1,7 @@
 #include "kyrTransform.h"
 #include "kyrRenderer.h"
 #include "kyrConstantBuffer.h"
+#include "kyrCamera.h"
 
 namespace kyr
 {
@@ -55,6 +56,8 @@ namespace kyr
 	{
 		renderer::TransformCB trCB = {};
 		trCB.mWorld = mWorld;
+		trCB.mView = Camera::GetViewMatrix();
+		trCB.mProjection = Camera::GetProjectionMatrix();
 
 		ConstantBuffer* cb = renderer::constantBuffer[(UINT)eCBType::Transform];
 

@@ -10,6 +10,7 @@ namespace kyr::enums
 		Particle,
 		MeshRenderer,
 		Script,
+		Camera,
 		End,
 	};
 

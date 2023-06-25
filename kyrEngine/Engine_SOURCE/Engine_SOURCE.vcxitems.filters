@@ -123,7 +123,6 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTexture.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCameraScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h">
       <Filter>Resource</Filter>
     </ClInclude>
@@ -133,7 +132,12 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrMaterial.h">
       <Filter>Resource</Filter>
     </ClInclude>
-    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCamera.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCamera.h">
+      <Filter>GameObject\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrCameraScript.h">
+      <Filter>GameObject\Component\Script</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrEntity.cpp">
@@ -196,7 +200,6 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTexture.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCameraScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMesh.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
@@ -206,6 +209,11 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrMaterial.cpp">
       <Filter>Resource</Filter>
     </ClCompile>
-    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCamera.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCamera.cpp">
+      <Filter>GameObject\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrCameraScript.cpp">
+      <Filter>GameObject\Component\Script</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
