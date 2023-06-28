@@ -9,7 +9,7 @@ namespace kyr
 		public Entity
 	{
 	public:
-		enum eState
+		enum class eState
 		{
 			Active,
 			Pause,

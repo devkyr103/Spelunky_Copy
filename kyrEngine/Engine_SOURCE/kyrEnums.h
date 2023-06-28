@@ -16,6 +16,7 @@ namespace kyr::enums
 
 	enum class eLayerType
 	{
+		BackGround,
 		Player,
 		Monster,
 		UI,

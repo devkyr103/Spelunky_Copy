@@ -97,22 +97,73 @@ namespace renderer
 
 		{
 			std::shared_ptr<Texture> texture
-				= Resources::Load<Texture>(L"Link", L"..\\Resources\\Texture\\Link.png");
+				= Resources::Load<Texture>(L"Link", L"..\\Resources\\test\\Link.png");
 
 			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
 			spriteMateiral->SetShader(spriteShader);
 			spriteMateiral->SetTexture(texture);
-			Resources::Insert(L"SpriteMaterial", spriteMateiral);
+			Resources::Insert(L"LinkMaterial", spriteMateiral);
 		}
 
 		{
 			std::shared_ptr<Texture> texture
-				= Resources::Load<Texture>(L"Smile", L"..\\Resources\\Texture\\Smile.png");
+				= Resources::Load<Texture>(L"Smile", L"..\\Resources\\test\\Smile.png");
 
 			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
 			spriteMateiral->SetShader(spriteShader);
 			spriteMateiral->SetTexture(texture);
-			Resources::Insert(L"SpriteMaterial02", spriteMateiral);
+			Resources::Insert(L"SmileMaterial", spriteMateiral);
+		}
+
+		// TEST Image
+		{
+			std::shared_ptr<Texture> texture
+				= Resources::Load<Texture>(L"TestScreen1", L"..\\Resources\\test\\testscreen1.jpg");
+
+			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
+			spriteMateiral->SetShader(spriteShader);
+			spriteMateiral->SetTexture(texture);
+			Resources::Insert(L"TestScreen1Material", spriteMateiral);
+		}
+
+		{
+			std::shared_ptr<Texture> texture
+				= Resources::Load<Texture>(L"TestScreen2", L"..\\Resources\\test\\testscreen2.png");
+
+			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
+			spriteMateiral->SetShader(spriteShader);
+			spriteMateiral->SetTexture(texture);
+			Resources::Insert(L"TestScreen2Material", spriteMateiral);
+		}
+
+		{
+			std::shared_ptr<Texture> texture
+				= Resources::Load<Texture>(L"spelunkylogo", L"..\\Resources\\test\\spelunkylogo.png");
+
+			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
+			spriteMateiral->SetShader(spriteShader);
+			spriteMateiral->SetTexture(texture);
+			Resources::Insert(L"spelunkylogoMaterial", spriteMateiral);
+		}
+
+		{
+			std::shared_ptr<Texture> texture
+				= Resources::Load<Texture>(L"temptitle", L"..\\Resources\\test\\temptitle.jpg");
+
+			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
+			spriteMateiral->SetShader(spriteShader);
+			spriteMateiral->SetTexture(texture);
+			Resources::Insert(L"temptitleMaterial", spriteMateiral);
+		}
+
+		{
+			std::shared_ptr<Texture> texture
+				= Resources::Load<Texture>(L"olmec", L"..\\Resources\\test\\olmec.png");
+
+			std::shared_ptr<Material> spriteMateiral = std::make_shared<Material>();
+			spriteMateiral->SetShader(spriteShader);
+			spriteMateiral->SetTexture(texture);
+			Resources::Insert(L"olmecMaterial", spriteMateiral);
 		}
 	}
 

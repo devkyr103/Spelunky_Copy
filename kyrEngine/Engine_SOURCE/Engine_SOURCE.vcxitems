@@ -38,6 +38,9 @@
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrResources.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrScene.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrSceneManager.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrTestObject.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrTestScene.h" />
+    <ClInclude Include="$(MSBuildThisFileDirectory)kyrTestScreen.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrScript.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrShader.h" />
     <ClInclude Include="$(MSBuildThisFileDirectory)kyrTexture.h" />
@@ -65,6 +68,9 @@
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrResources.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrScene.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrSceneManager.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrTestObject.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrTestScene.cpp" />
+    <ClCompile Include="$(MSBuildThisFileDirectory)kyrTestScreen.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrScript.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrShader.cpp" />
     <ClCompile Include="$(MSBuildThisFileDirectory)kyrTexture.cpp" />

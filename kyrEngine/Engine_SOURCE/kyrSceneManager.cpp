@@ -1,5 +1,6 @@
 #include "kyrSceneManager.h"
 #include "kyrPlayScene.h"
+#include "kyrTestScene.h"
 
 namespace kyr
 {
@@ -8,8 +9,11 @@ namespace kyr
 
 	void SceneManager::Initialize()
 	{
-		mActiveScene = new PlayScene();
-		mScenes.insert(std::make_pair(L"PlayScene", mActiveScene));
+		/*mActiveScene = new PlayScene();
+		mScenes.insert(std::make_pair(L"PlayScene", mActiveScene));*/
+
+		mActiveScene = new TestScene();
+		mScenes.insert(std::make_pair(L"TestScene", mActiveScene));
 
 		mActiveScene->Initialize();
 
